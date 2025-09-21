@@ -15,6 +15,7 @@
 <body>
     <section class="top">
         <img class="background-image top__image-group" src="./img/star-group.png" alt="звезда группа">
+        <img class="background-image top__image-group-mobile" src="./img/star-group-mobile.png" alt="звезда группа">
         <img class="background-image top__image-2" src="./img/star-2.png" alt="звезда 2">
         <img class="background-image top__image-3" src="./img/star-3.png" alt="звезда 3">
         <img class="background-image top__image-4" src="./img/star-4.png" alt="звезда 4">
@@ -22,11 +23,12 @@
 
         <div class="top-content center">
 
-            <h1 class="h1 top__title">Добро пожаловать<br>на мой сайт мини-игр</h1>
-            <p class="text-1 top__subtitle ">Тебе предстоит пройти несколько увлекательных игр.<br>Если готов, нажимай
+            <h1 class="h1 top__title">Добро пожаловать <br>на мой сайт мини-игр</h1>
+            <p class="text-1 top__subtitle ">Тебе предстоит пройти несколько увлекательных игр. Если готов, нажимай
                 <b>«Поехали!»</b> и <b>приступай</b>.
             </p>
-            <a class="text-1 button" href="#about">Поехали!</a>
+            <a class="text-1 button top__button" href="#about">Поехали!</a>
+            <a class="text-1 button top__button-mobile" href="#games">Поехали!</a>
         </div>
 
         <div class="animated-line">
@@ -35,9 +37,9 @@
     </section>
 
     <section class="about center" id="about">
-        <img class="background-image about__image-1" src="./img/star-1.png" alt="звезда 1">
-        <img class="background-image about__image-11" src="./img/star-11.png" alt="звезда 11">
-        <img class="background-image about__image-12" src="./img/star-12.png" alt="звезда 12">
+        <img class="background-image about__bg-image-1" src="./img/star-1.png" alt="звезда 1">
+        <img class="background-image about__bg-image-11" src="./img/star-11.png" alt="звезда 11">
+        <img class="background-image about__bg-image-12" src="./img/star-12.png" alt="звезда 12">
 
         <header class="header">
             <h2 class="h1 header__title">Об играх</h2>
@@ -48,7 +50,7 @@
         </header>
 
         <div class="about__content">
-            <a href="#" class="about__link">
+            <a href="#game-1" class="about__link">
                 <article class="about-game">
                     <img class="about-game__img" src="./img/game-1.svg" alt="обложка игры 1">
 
@@ -59,7 +61,7 @@
                 </article>
             </a>
 
-            <a href="#" class="about__link">
+            <a href="#game-2" class="about__link">
                 <article class="about-game">
                     <img class="about-game__img" src="./img/game-2.svg" alt="обложка игры 2">
 
@@ -70,7 +72,7 @@
                 </article>
             </a>
 
-            <a href="#" class="about__link">
+            <a href="#game-3" class="about__link">
                 <article class="about-game">
                     <img class="about-game__img" src="./img/game-3.svg" alt="обложка игры 3">
 
@@ -81,10 +83,10 @@
                 </article>
             </a>
 
-            <a href="#" class="about__link">
+            <a href="#game-4" class="about__link">
                 <article class="about-game">
                     <div class="img-text">
-                        <img class="about-game__img about-game__img_text" src="./img/game-4.svg" alt="обложка игры 4">
+                        <img class="about-game__img" src="./img/game-4.svg" alt="обложка игры 4">
                         <span class="img-text__fist">✊</span>
                     </div>
 
@@ -95,7 +97,7 @@
                 </article>
             </a>
 
-            <a href="#" class="about__link about__link_end">
+            <a href="#game-5" class="about__link about__link_end">
                 <article class="about-game">
                     <img class="about-game__img" src="./img/game-5.svg" alt="обложка игры 5">
 
@@ -106,7 +108,7 @@
                 </article>
             </a>
 
-            <a href="#" class="about__link">
+            <a href="#game-6" class="about__link">
                 <article class="about-game">
                     <img class="about-game__img" src="./img/game-6.svg" alt="обложка игры 6">
 
@@ -116,6 +118,83 @@
                     </div>
                 </article>
             </a>
+        </div>
+    </section>
+
+    <section class="games center" id="games">
+        <img class="background-image games__bg-image-6" src="./img/star-6.png" alt="звезда 6">
+        <img class="background-image games__bg-image-7" src="./img/star-7.png" alt="звезда 7">
+        <img class="background-image games__bg-image-8" src="./img/star-8.png" alt="звезда 8">
+        <img class="background-image games__bg-image-10" src="./img/star-10.png" alt="звезда 10">
+
+        <header class="header">
+            <h2 class="h1 header__title">Мини-игры</h2>
+        </header>
+
+        <div class="games__content">
+            <article class="game game_invers" id="game-1">
+                <img class="game__img" src="./img/game-1.svg" alt="обложка игры 1">
+
+                <div class="game__info">
+                    <h2 class="h2 game__title">Угадай число</h2>
+                    <p class="text-1 game__description">Попробуй угадать случайное <br>число от 1 до 100.</p>
+                    <a class="text-1 button game__button" href="#">Играть!</a>
+                </div>
+            </article>
+
+            <article class="game" id="game-2">
+                <img class="game__img" src="./img/game-2.svg" alt="обложка игры 2">
+
+                <div class="game__info">
+                    <h2 class="h2 game__title">Простая<br>арифметика</h2>
+                    <p class="text-1 game__description">Попробуй решить простые арифметические задачи.</p>
+                    <a class="text-1 button game__button" href="#">Играть!</a>
+                </div>
+            </article>
+
+            <article class="game game_invers" id="game-3">
+                <img class="game__img" src="./img/game-3.svg" alt="обложка игры 3">
+
+                <div class="game__info">
+                    <h2 class="h2 game__title">Переверни текст</h2>
+                    <p class="text-1 game__description">Попробуй ввести текст, который <br>будет перевернут.</p>
+                    <a class="text-1 button game__button" href="#">Играть!</a>
+                </div>
+            </article>
+
+            <article class="game" id="game-4">
+                <div class="img-text">
+                    <img class="game__img game__img_covered" src="./img/game-4.svg" alt="обложка игры 4">
+                    <span class="img-text__fist">✊</span>
+                </div>
+
+                <div class="game__info">
+                    <h2 class="h2 game__title">Камень,<br>ножницы,<br>бумага</h2>
+                    <p class="text-1 game__description">Сыграй в популярную игру <br>против компьютера.</p>
+                    <a class="text-1 button game__button" href="#">Играть!</a>
+                </div>
+            </article>
+
+            <article class="game game_invers" id="game-5">
+                <img class="game__img" src="./img/game-5.svg" alt="обложка игры 5">
+
+                <div class="game__info">
+                    <h2 class="h2 game__title">Простая,<br>викторина</h2>
+                    <p class="text-1 game__description">Отвечай на вопросы викторины <br>с вариантами ответов.</p>
+                    <a class="text-1 button game__button" href="#">Играть!</a>
+                </div>
+            </article>
+
+            <article class="game" id="game-6">
+                <img class="game__img" src="./img/game-6.svg" alt="обложка игры 6">
+
+                <div class="game__info">
+                    <h2 class="h2 game__title">Генератор<br>случайных<br>цветов</h2>
+                    <p class="text-1 game__description">Игра, в которой при клике на кнопку фон страницы меняется на
+                        случайный.</p>
+                    <a class="text-1 button game__button" href="#">Играть!</a>
+                </div>
+            </article>
         </div>
     </section>
 

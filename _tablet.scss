@@ -1,0 +1,29 @@
+@media (max-width: 1260px) {
+    $width-site-tablet: 788px;
+    $gap-tablet: 24px;
+
+    .center {
+        padding-left: calc(50% - 394px);
+        padding-right: calc(50% - 394px);
+    }
+
+    .about {
+        &__content {
+            align-items: center;
+            gap: 32px; // or 24px?
+        }
+
+        &__link {
+            &_end {
+                align-self: inherit;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 833px) {
+    .center {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
