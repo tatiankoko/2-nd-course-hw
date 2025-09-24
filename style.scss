@@ -1,377 +1,380 @@
 @import 'vars';
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  font-size: 16px;
-  /* Задаем базовый размер шрифта */
+    font-size: 16px;
+    /* Задаем базовый размер шрифта */
 }
 
 body {
-  font-family: $font-fam;
+    font-family: $font-fam;
 }
 
 b {
-  font-weight: $fw-semi-bold;
+    font-weight: $fw-semi-bold;
 }
 
 .h1 {
-  font-size: 4rem; // 64px
-  font-weight: $fw-bold;
-  line-height: 78px;
-  vertical-align: middle;
+    font-size: 4rem; // 64px
+    font-weight: $fw-bold;
+    line-height: 78px;
+    vertical-align: middle;
 }
 
 .h2 {
-  font-size: 3rem; // 48px
-  font-weight: $fw-bold;
-  line-height: 100%;
-  vertical-align: middle;
+    font-size: 3rem; // 48px
+    font-weight: $fw-bold;
+    line-height: 100%;
+    vertical-align: middle;
 }
 
 .h3 {
-  font-size: 2rem; // 32px
-  font-weight: $fw-bold;
-  line-height: 100%;
-  vertical-align: middle;
+    font-size: 2rem; // 32px
+    font-weight: $fw-bold;
+    line-height: 100%;
+    vertical-align: middle;
 }
 
 .text-1 {
-  font-size: 1.5rem; // 24px
-  font-weight: $fw-regular;
-  line-height: 2rem;
+    font-size: 1.5rem; // 24px
+    font-weight: $fw-regular;
+    line-height: 2rem;
 }
 
 .text-2 {
-  font-size: 1rem; // 16px
-  font-weight: $fw-medium;
-  line-height: 2rem;
+    font-size: 1rem; // 16px
+    font-weight: $fw-medium;
+    line-height: 2rem;
 }
 
 .center {
-  padding-left: calc(50% - 600px);
-  padding-right: calc(50% - 600px);
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
 }
 
 .background-image {
-  position: absolute;
-  z-index: 0;
+    position: absolute;
+    z-index: 0;
 }
 
 .button {
-  color: $color-text;
-  font-weight: $fw-semi-bold;
-  background-color: $color-title;
-  text-align: center;
-  text-decoration-line: none;
+    color: $color-text;
+    font-weight: $fw-semi-bold;
+    background-color: $color-title;
+    text-align: center;
+    text-decoration-line: none;
 
-  border-radius: $border-radius * 2;
-  padding: 16px 28px;
-  border: 1px solid $color-title;
+    border-radius: $border-radius * 2;
+    padding: 16px 28px;
+    border: 1px solid $color-title;
 
-  min-width: 247px;
+    min-width: 247px;
 
-  transition: all 0.5s;
+    transition: all 0.5s;
 
-  &:hover {
-    background-color: $color-text;
-    border-color: $color-border;
-    color: $color-border;
-  }
+    &:hover {
+        background-color: $color-text;
+        border-color: $color-border;
+        color: $color-border;
+    }
 }
 
 .top {
-  background-color: $color-background;
-  padding-top: 196px;
-  position: relative;
+    background-color: $color-background;
+    padding-top: 196px;
+    position: relative;
 
-  &__image-group {
-    right: 0;
-    top: 0;
-  }
+    &__image-group {
+        right: 0;
+        top: 0;
+    }
 
-  &__image-group-mobile {
-    display: none;
-    right: 0;
-    top: 0;
-  }
+    &__image-group-mobile {
+        display: none;
+        right: 0;
+        top: 0;
+    }
 
-  &__image-2 {
-    left: 63px;
-    top: 94px;
-  }
+    &__image-2 {
+        left: 63px;
+        top: 94px;
+    }
 
-  &__image-3 {
-    left: 156px;
-    top: 69px
-  }
+    &__image-3 {
+        left: 156px;
+        top: 69px
+    }
 
-  &__image-4 {
-    right: 344px;
-    bottom: 149px;
-  }
+    &__image-4 {
+        right: 344px;
+        bottom: 149px;
+    }
 
-  &__image-5 {
-    right: 455px;
-    bottom: 225px;
-  }
+    &__image-5 {
+        right: 455px;
+        bottom: 225px;
+    }
 
-  &__title {
-    color: $color-title;
-  }
+    &__title {
+        color: $color-title;
+    }
 
-  &__subtitle {
-    color: $color-title;
-    margin-bottom: 48px;
-    max-width: 720px;
-  }
+    &__subtitle {
+        color: $color-title;
+        margin-bottom: 48px;
+        max-width: 720px;
+    }
 
-  &__button-mobile {
-    display: none;
-  }
+    &__button-mobile {
+        display: none;
+    }
 }
 
 .top-content {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 24px;
-
-  margin-bottom: 156px;
-}
-
-.animated-line {
-  position: relative;
-  z-index: 1;
-  background-color: $color-line;
-  height: 90px; // временно
-}
-
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
-
-  &__title {
-    color: $color-text;
-  }
-
-  &__text {
-    color: $color-text;
-  }
-}
-
-.about {
-  position: relative;
-
-  background-color: $color-title;
-  padding-top: 94px;
-  padding-bottom: 96px;
-
-  &__bg-image-1 {
-    top: 77px;
-    right: 0;
-  }
-
-  &__bg-image-11 {
-    top: 770px;
-    left: 25px;
-  }
-
-  &__bg-image-12 {
-    top: 822px;
-    left: 40px;
-  }
-
-  &__content {
     position: relative;
-    display: flex;
-    align-items: flex-start;
-    justify-items: flex-start;
-    flex-wrap: wrap;
-    column-gap: $gap;
-
-    max-width: $width-site;
-    margin-top: 72px;
-  }
-
-  &__link {
-    //display: flex;
-    text-decoration-line: none;
-    transition: transform 0.5s;
-
-    &:hover {
-      transform: scale(1.07);
-    }
-
-    &_end {
-      align-self: self-end;
-    }
-  }
-}
-
-.about-game {
-  border-radius: $border-radius;
-  background-color: $color-text;
-
-  display: flex;
-  flex-direction: column;
-  gap: $gap;
-
-  max-width: 378px;
-  padding-bottom: 36px;
-
-  &__img {
-    width: 100%;
-    height: 100%;
-    border-radius: 30px;
-    display: flex;
-  }
-
-  &__info {
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    justify-content: flex-start;
+    gap: 24px;
 
-    margin: 0 $gap;
-  }
-
-  &__number {
-    color: $color-title;
-    line-height: 18px;
-    background-color: $color-text-background;
-    border-radius: 52px;
-
-    padding: 8px 16px 10px 16px;
-  }
-
-  &__title {
-    color: $color-title;
-    line-height: 39px;
-  }
+    margin-bottom: 156px;
 }
 
-.img-text {
-  position: relative;
-
-  &__fist {
-    position: absolute;
-    font-size: 81px;
-    font-weight: 800;
-    line-height: 110px;
-    text-align: center;
-    top: calc(50% - 55px);
-    left: calc(50% - 55px);
-
-    transform: rotate(10deg);
-  }
-}
-
-.games {
-  position: relative;
-
-  background-color: $color-title;
-  padding-bottom: 144px;
-
-  &__bg-image-6 {
-    top: 126px;
-    right: 45px;
-  }
-
-  &__bg-image-7 {
-    top: 47px;
-    right: 124px;
-  }
-
-  &__bg-image-8 {
-    bottom: 65px;
-    right: 52px;
-  }
-
-  &__bg-image-10 {
-    bottom: 45px;
-    right: 150px;
-  }
-
-  &__content {
+.animated-line {
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-items: flex-start;
-    gap: $gap;
-
-    margin-top: 72px;
-  }
+    z-index: 1;
+    background-color: $color-line;
+    height: 90px; // временно
 }
 
-.game {
-  border-radius: $border-radius;
-  background-color: $color-text;
-
-  display: flex;
-  justify-content: space-between;
-  justify-content: flex-start;
-
-  flex-basis: 788px;
-  flex-grow: 1;
-
-  &_invers {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-  }
-
-  &__img {
-    border-radius: 30px;
-    width: 50%;
-    height: 100%; //500px;
-    display: block;
-
-    &_covered {
-      width: 100%;
-    }
-  }
-
-  &__info {
+.header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
 
-    margin: 48px;
-  }
+    &__title {
+        color: $color-text;
+    }
 
-  &__title {
-    color: $color-title;
-    line-height: 59px;
-  }
+    &__text {
+        color: $color-text;
+    }
+}
 
-  &__description {
-    margin-bottom: 12px;
-  }
+.about {
+    position: relative;
+
+    background-color: $color-title;
+    padding-top: 94px;
+    padding-bottom: 96px;
+
+    &__bg-image-1 {
+        top: 77px;
+        right: 0;
+    }
+
+    &__bg-image-11 {
+        top: 770px;
+        left: 25px;
+    }
+
+    &__bg-image-12 {
+        top: 822px;
+        left: 40px;
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-items: flex-start;
+        flex-wrap: wrap;
+        column-gap: $gap;
+
+        max-width: $width-site;
+        margin-top: 72px;
+    }
+
+    &__link {
+        text-decoration-line: none;
+        transition: transform 0.5s;
+
+        &:hover {
+            transform: scale(1.07);
+        }
+
+        &_end {
+            align-self: self-end;
+        }
+    }
+}
+
+.about-game {
+    border-radius: $border-radius;
+    background-color: $color-text;
+
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+
+    max-width: 378px;
+    padding-bottom: 36px;
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        border-radius: $border-radius;
+        display: flex;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+
+        margin: 0 $gap;
+    }
+
+    &__number {
+        color: $color-title;
+        line-height: 18px;
+        background-color: $color-text-background;
+        border-radius: 52px;
+
+        padding: 8px 1rem 10px 1rem;
+    }
+
+    &__title {
+        color: $color-title;
+        line-height: 39px;
+    }
+}
+
+.img-text {
+    position: relative;
+
+    &_wide {
+        width: 50%;
+    }
+
+    &__fist {
+        position: absolute;
+        background-color: #FFC700;
+
+        width: 26%;
+        height: 30%;
+
+        left: 37%;
+        top: 35%;
+    }
+}
+
+.games {
+    position: relative;
+
+    background-color: $color-title;
+    padding-bottom: 144px;
+
+    &__bg-image-6 {
+        top: 126px;
+        right: 45px;
+    }
+
+    &__bg-image-7 {
+        top: 47px;
+        right: 124px;
+    }
+
+    &__bg-image-8 {
+        bottom: 65px;
+        right: 52px;
+    }
+
+    &__bg-image-10 {
+        bottom: 45px;
+        right: 150px;
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-items: flex-start;
+        gap: $gap;
+
+        margin-top: 72px;
+    }
+}
+
+.game {
+    border-radius: $border-radius;
+    background-color: $color-text;
+
+    display: flex;
+    justify-content: space-between;
+    justify-content: flex-start;
+
+    flex-basis: 788px;
+    flex-grow: 1;
+
+    &_invers {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    &__img {
+        border-radius: $border-radius;
+        width: 50%;
+        height: 100%; //500px;
+        display: block;
+
+        &_covered {
+            width: 100%;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        width: 50%;
+
+        padding: 3rem; // 48px
+    }
+
+    &__title {
+        color: $color-title;
+        line-height: 59px;
+    }
+
+    &__description {
+        margin-bottom: 12px;
+    }
 }
 
 .footer {
-  background-color: $color-line;
+    background-color: $color-line;
 
-  text-align: center;
-  align-content: center;
+    text-align: center;
+    align-content: center;
 
-  height: 150px;
+    height: 150px;
 
-  &__text {
-    color: $color-border;
-    font-weight: $fw-semi-bold;
-  }
+    &__text {
+        color: $color-border;
+        font-weight: $fw-semi-bold;
+    }
 }
 
 @import 'tablet';
