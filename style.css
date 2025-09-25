@@ -286,7 +286,7 @@ b {
   line-height: 18px;
   background-color: #F7F7F7;
   border-radius: 52px;
-  padding: 8px 16px 10px 16px;
+  padding: 8px 1rem 10px 1rem;
 }
 
 .about-game__title {
@@ -298,16 +298,17 @@ b {
   position: relative;
 }
 
+.img-text_wide {
+  width: 50%;
+}
+
 .img-text__fist {
   position: absolute;
-  font-size: 81px;
-  font-weight: 800;
-  line-height: 110px;
-  text-align: center;
-  top: calc(50% - 55px);
-  left: calc(50% - 55px);
-  -webkit-transform: rotate(10deg);
-          transform: rotate(10deg);
+  background-color: #FFC700;
+  width: 26%;
+  height: 30%;
+  left: 37%;
+  top: 35%;
 }
 
 .games {
@@ -403,7 +404,8 @@ b {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 24px;
-  margin: 48px;
+  width: 50%;
+  padding: 3rem;
 }
 
 .game__title {
@@ -437,12 +439,37 @@ b {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 32px;
+    gap: 2rem;
+    margin-top: 4rem;
   }
   .about__link_end {
     -ms-flex-item-align: inherit;
         -ms-grid-row-align: inherit;
         align-self: inherit;
+  }
+  .games {
+    padding-bottom: 94px;
+  }
+  .games__content {
+    margin-top: 4rem;
+  }
+  .game__title {
+    line-height: 39px;
+    font-size: 2rem;
+  }
+  .game__description {
+    font-size: 1rem;
+    line-height: 20px;
+    margin-bottom: 0;
+  }
+  .game__button {
+    font-size: 1rem;
+    line-height: 100%;
+  }
+  .game__info {
+    gap: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
 
@@ -462,14 +489,11 @@ b {
     gap: 24px;
   }
   .about-game__title {
-    font-size: 24px;
-  }
-  .games {
-    padding-top: 48px;
-    padding-bottom: 10px;
+    font-size: 2rem;
   }
   .games__content {
-    margin-top: 48px;
+    margin-top: 3rem;
+    gap: 24px;
   }
   .header__title {
     font-size: 40px;
@@ -477,13 +501,17 @@ b {
   }
   .game__title {
     color: #202027;
-    line-height: 39px;
+    line-height: 36px;
     font-size: 2rem;
   }
   .game__description {
     font-size: 1rem;
     line-height: 20px;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
+  }
+  .game__info {
+    gap: 10px;
+    padding-bottom: 20px;
   }
   .footer {
     height: 100px;
@@ -592,8 +620,8 @@ b {
     display: none;
   }
   .games__content {
-    margin-top: 48px;
-    gap: 24px;
+    margin-top: 3rem;
+    gap: 1rem;
   }
   .header__title {
     font-size: 40px;
@@ -632,7 +660,8 @@ b {
         -ms-flex-align: start;
             align-items: flex-start;
     gap: 1rem;
-    margin: 29px;
+    width: 100%;
+    padding: 29px;
   }
   .game__title {
     color: #202027;
@@ -645,6 +674,9 @@ b {
     margin-bottom: 16px;
   }
   .game__button {
+    width: 100%;
+  }
+  .img-text_wide {
     width: 100%;
   }
   .footer {

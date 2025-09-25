@@ -97,13 +97,11 @@ switch (monthNumber) {
     case 3:
     case 4:
     case 5:
-
         console.log(`Месяц номер ${monthNumber} принадлежит к сезону весна`);
         break;
     case 6:
     case 7:
     case 8:
-
         console.log(`Месяц номер ${monthNumber} принадлежит к сезону лето`);
         break;
     case 9:
