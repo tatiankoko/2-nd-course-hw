@@ -1,5 +1,5 @@
 /* Текстовая шапка игры */
-intro = `Игра ПРОСТАЯ АРИФМЕТИКА
+let introGame2 = `Игра ПРОСТАЯ АРИФМЕТИКА
 
 Решай простые арифметические задачи`;
 
@@ -83,7 +83,7 @@ let game2 = () => {
     while (userResult !== null) {
         operation = generateTask();
 
-        userResult = prompt(`${intro}\n\n${text}\n\n${operation}`);
+        userResult = prompt(`${introGame2}\n\n${text}\n\n${operation}`);
 
         if (userResult !== ''
             && !isNaN(Number(userResult))
