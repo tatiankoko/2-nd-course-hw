@@ -3,7 +3,7 @@ let minLimit = 1;
 let maxLimit = 100;
 
 /* Текстовая шапка игры */
-let intro = `Игра УГАДАЙ ЧИСЛО
+let introGame1 = `Игра УГАДАЙ ЧИСЛО
 
 Угадай случайное число от ${minLimit} до ${maxLimit}.\n\n`;
 
@@ -20,7 +20,7 @@ let getRandomInt = (min, max) => {
 }
 
 /**
- * Ввод пользователем загадонного числа и проверка ввода на корректность
+ * Ввод пользователем загаданного числа и проверка ввода на корректность
  * @param {*} text текст внутри prompt
  * @returns корректное введенное число в заданном интервале или null при отмене ввода
  */
@@ -37,7 +37,7 @@ let insertNumber = (text) => {
             (isNaN(Number(userNumber))
                 || Number(userNumber) < minLimit
                 || Number(userNumber) > maxLimit)) {
-            userNumber = prompt(`${intro}Ты ввел некорректное число ${userNumber}\n\nВведи целое число от ${minLimit} до ${maxLimit}:`);
+            userNumber = prompt(`${introGame1}Ты ввел некорректное число ${userNumber}\n\nВведи целое число от ${minLimit} до ${maxLimit}:`);
         }
 
         return userNumber;
@@ -51,7 +51,7 @@ let game1 = () => {
     let hiddenNumber = getRandomInt(minLimit, maxLimit);
 
     let userNumber = insertNumber(
-        `${intro}Будут подсказки: введенное число больше или меньше загаданного\n\nВведи загаданное число:`);
+        `${introGame1}Будут подсказки: введенное число больше или меньше загаданного\n\nВведи загаданное число:`);
 
     if (userNumber === null) {
         return;
@@ -64,10 +64,10 @@ let game1 = () => {
 
         let hint = (userNumber < hiddenNumber) ? 'больше' : 'меньше';
 
-        userNumber = insertNumber(`${intro}Ты ввел число ${userNumber}\n\nПОДСКАЗКА: загаданное число ${hint}\n\nВведи загаданное число:`);
+        userNumber = insertNumber(`${introGame1}Ты ввел число ${userNumber}\n\nПОДСКАЗКА: загаданное число ${hint}\n\nВведи загаданное число:`);
     }
 
     if (Number(userNumber) === hiddenNumber) {
-        alert(`${intro}Вы ввели число ${userNumber}\n\nПОЗДРАВЛЯЕМ! Вы угадали загаданное число!`);
+        alert(`${introGame1}Вы ввели число ${userNumber}\n\nПОЗДРАВЛЯЕМ! Вы угадали загаданное число!`);
     }
 }
