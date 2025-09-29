@@ -8,7 +8,8 @@
 
 html {
     font-size: 16px;
-    /* Задаем базовый размер шрифта */
+
+    scroll-behavior: smooth;
 }
 
 body {
@@ -154,8 +155,56 @@ button {
 .animated-line {
     position: relative;
     z-index: 1;
+
+    overflow: hidden;
+
     background-color: $color-line;
-    height: 90px; // временно
+    height: 90px;
+    width: 100%;
+
+    &__text {
+        color: $color-title;
+        font-weight: $fw-bold;
+        font-size: 30px;
+        line-height: 110%;
+        text-wrap: nowrap;
+        text-transform: uppercase;
+
+        display: flex;
+        align-items: center;
+        gap: 51px;
+
+        &::after {
+            content: "";
+            background-image: url("./img/star-animated.png");
+            background-repeat: no-repeat;
+            background-size: 100%;
+
+            display: block;
+            width: 36px;
+            height: 36px;
+        }
+    }
+}
+
+.animated-line-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 51px;
+
+    padding: 27px 0; // 49px;
+
+    animation: scroll-left 10s linear 0s infinite;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
 }
 
 .header {
@@ -325,13 +374,12 @@ button {
     background-color: $color-text;
 
     display: flex;
-    justify-content: space-between;
     justify-content: flex-start;
 
     flex-basis: 788px;
     flex-grow: 1;
 
-    &_invers {
+    &_inverse {
         flex-direction: row-reverse;
         justify-content: space-between;
     }
@@ -339,7 +387,7 @@ button {
     &__img {
         border-radius: $border-radius;
         width: 50%;
-        height: 100%; //500px;
+        height: 100%;
         display: block;
 
         &_covered {
