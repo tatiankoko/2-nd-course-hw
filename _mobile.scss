@@ -92,7 +92,22 @@
     }
 
     .animated-line {
-        height: 51px; // временно
+        height: 51px;
+
+        &__text {
+            font-size: 1rem;
+            gap: 27px;
+
+            &::after {
+                width: 19px;
+                height: 19px;
+            }
+        }
+    }
+
+    .animated-line-wrapper {
+        gap: 27px;
+        padding: 1rem 0;
     }
 
     .about {
@@ -136,7 +151,7 @@
         flex-basis: 343px;
         flex-direction: column;
 
-        &_invers {
+        &_inverse {
             flex-direction: column;
             justify-content: flex-start;
         }
