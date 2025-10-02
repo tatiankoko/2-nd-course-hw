@@ -1,5 +1,5 @@
 /* Текстовая шапка игры */
-let introGame5 = `Игра ВИКТОРИНА
+const introGame5 = `Игра ВИКТОРИНА
 Простая викторина с вариантами ответов`;
 
 // Массив вопросов и правильных ответов
@@ -26,11 +26,12 @@ const quiz = [
  */
 let game5 = () => {
     let correctCount = 0;
+    const quizCount = quiz.length;
 
-    for (let index = 0; index < quiz.length; index++) {
+    for (let index = 0; index < quizCount; index++) {
         let item = quiz[index];
 
-        const question = `Вопрос ${index + 1}/${quiz.length} : ${item.question}`;
+        const question = `Вопрос ${index + 1}/${quizCount} : ${item.question}`;
         const option = `Введи верный вариант ответа:\n${item.options.join('\n')}`;
 
         let answer = prompt(`${introGame5}\n\n${question}\n\n${option}`);
@@ -44,7 +45,7 @@ let game5 = () => {
         }
     }
 
-    const result = `Конец!\n\nПравильных ответов ${correctCount} из ${quiz.length}`;
+    const result = `Конец!\n\nПравильных ответов ${correctCount} из ${quizCount}`;
 
     alert(`${introGame5}\n\n${result}`);
 }

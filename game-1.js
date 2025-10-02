@@ -1,11 +1,10 @@
-/* Интервал загаданных чисел */ 
-let minLimit = 1;
-let maxLimit = 100;
+/* Интервал загаданных чисел */
+const minLimit = 1;
+const maxLimit = 100;
 
 /* Текстовая шапка игры */
-let introGame1 = `Игра УГАДАЙ ЧИСЛО
-
-Угадай случайное число от ${minLimit} до ${maxLimit}.\n\n`;
+const introGame1 = `Игра УГАДАЙ ЧИСЛО
+Угадай случайное число от ${minLimit} до ${maxLimit}.`;
 
 /**
  * Получение случайного целого числа в заданном интервале
@@ -21,37 +20,31 @@ let getRandomInt = (min, max) => {
 
 /**
  * Ввод пользователем загаданного числа и проверка ввода на корректность
- * @param {*} text текст внутри prompt
+ * @param {*} text текст внутри prompt после {@link introGame1}
  * @returns корректное введенное число в заданном интервале или null при отмене ввода
  */
 let insertNumber = (text) => {
-    let userNumber = prompt(`${text}`);
+    let userNumber = prompt(`${introGame1}\n\n${text}`);
 
-    if (typeof userNumber === null
-        || !isNaN(Number(userNumber))
-        && userNumber >= minLimit
-        && userNumber <= maxLimit) {
-        return userNumber;
-    } else {
-        while (userNumber != null &&
-            (isNaN(Number(userNumber))
-                || Number(userNumber) < minLimit
-                || Number(userNumber) > maxLimit)) {
-            userNumber = prompt(`${introGame1}Ты ввел некорректное число ${userNumber}\n\nВведи целое число от ${minLimit} до ${maxLimit}:`);
-        }
-
-        return userNumber;
+    while (userNumber != null &&
+        (isNaN(Number(userNumber))
+            || Number(userNumber) < minLimit
+            || Number(userNumber) > maxLimit)) {
+        userNumber = prompt(`${introGame1}\n\nТы ввел некорректное число ${userNumber}\n\nВведи целое число от ${minLimit} до ${maxLimit}:`);
     }
+
+    return userNumber;
 }
 
 /**
  * Старт игры
  */
 let game1 = () => {
-    let hiddenNumber = getRandomInt(minLimit, maxLimit);
+    const hiddenNumber = getRandomInt(minLimit, maxLimit);
+    const bottomText = 'Введи загаданное число:';
 
     let userNumber = insertNumber(
-        `${introGame1}Будут подсказки: введенное число больше или меньше загаданного\n\nВведи загаданное число:`);
+        `Будут подсказки: введенное число больше или меньше загаданного\n\n${bottomText}`);
 
     if (userNumber === null) {
         return;
@@ -62,12 +55,11 @@ let game1 = () => {
             return;
         }
 
-        let hint = (userNumber < hiddenNumber) ? 'больше' : 'меньше';
+        let hint = (userNumber < hiddenNumber) ? 'БОЛЬШЕ' : 'МЕНЬШЕ';
 
-        userNumber = insertNumber(`${introGame1}Ты ввел число ${userNumber}\n\nПОДСКАЗКА: загаданное число ${hint}\n\nВведи загаданное число:`);
+        userNumber = insertNumber(
+            `Ты ввел число ${userNumber}\n\nПОДСКАЗКА: загаданное число ${hint}\n\n${bottomText}`);
     }
 
-    if (Number(userNumber) === hiddenNumber) {
-        alert(`${introGame1}Вы ввели число ${userNumber}\n\nПОЗДРАВЛЯЕМ! Вы угадали загаданное число!`);
-    }
+    alert(`${introGame1}\n\nТы ввел число ${userNumber}\n\nПОЗДРАВЛЯЕМ! Ты угадал загаданное число!`);
 }

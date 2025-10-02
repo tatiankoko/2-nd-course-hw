@@ -1,8 +1,7 @@
 /* Текстовая шапка игры */
-let introGame4 = `Игра КАМЕНЬ, НОЖНИЦЫ, БУМАГА против компьютера`;
+const introGame4 = `Игра КАМЕНЬ, НОЖНИЦЫ, БУМАГА против компьютера`;
 
 // варианты
-//const game4Choice = ['камень', 'ножницы', 'бумага'];
 const game4Choice = ['камень', 'ножницы', 'бумага'];
 
 /**
@@ -11,7 +10,8 @@ const game4Choice = ['камень', 'ножницы', 'бумага'];
  */
 let randomChoice = () => Math.floor(Math.random() * game4Choice.length + 1);
 
-let bottomText = `Введи свой вариант:\n${game4Choice
+/* {@link game4Choice} в столбик с индексом */
+const bottomText = `Введи свой вариант:\n${game4Choice
     .map((item, index) => `${index + 1}. ${item}`)
     .join('\n')}`;
 
@@ -23,21 +23,15 @@ let bottomText = `Введи свой вариант:\n${game4Choice
 let askUserChoice = (text) => {
     let userNumber = prompt(`${introGame4}\n\n${text}${bottomText}`);
 
-    if (typeof userNumber === null
-        || !isNaN(+userNumber)
-        && userNumber >= 1
-        && userNumber <= game4Choice.length) {
-        return userNumber;
-    } else {
-        while (userNumber != null &&
-        (isNaN(Number(userNumber))
+    while (userNumber != null
+        && !game4Choice.includes(userNumber)
+        && (isNaN(Number(userNumber))
             || Number(userNumber) < 1
             || Number(userNumber) > game4Choice.length)) {
-            userNumber = prompt(`${introGame4}\n\nТы ввел некорректное число.\n\n${bottomText}`);
-        }
-
-        return userNumber;
+        userNumber = prompt(`${introGame4}\n\nТы ввел некорректное число.\n\n${bottomText}`);
     }
+
+    return userNumber;
 }
 
 /**
@@ -48,6 +42,11 @@ let game4 = () => {
 
     while (userResult !== null) {
         let computerResult = randomChoice();
+
+        if (isNaN(+userResult)) {
+            userResult = game4Choice.indexOf(userResult) + 1;
+        }
+
         let text = `${game4Choice[userResult - 1].toUpperCase()} (ты) vs ${game4Choice[computerResult - 1].toUpperCase()} (компьютер)\n\n`;
 
         if (+userResult === computerResult) {
@@ -55,8 +54,7 @@ let game4 = () => {
         } else if (
             (+userResult === 1 && computerResult === 2) ||
             (+userResult === 2 && computerResult === 3) ||
-            (+userResult === 3 && computerResult === 1)
-        ) {
+            (+userResult === 3 && computerResult === 1)) {
             text += 'ТЫ ПОБЕДИЛ!!';
         } else {
             text += 'ТЫ ПРОИГРАЛ. Попробуй еще!';
